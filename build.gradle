@@ -1,0 +1,20 @@
+group 'cognizant-technical-test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.dropwizard:dropwizard-core:0.9.2'
+    testCompile 'junit:junit:4.12'
+    testCompile 'io.dropwizard:dropwizard-testing:0.9.2'
+}
+mainClassName = "com.cognizant.api.CarRentalApplication"
+
+run { args 'server', 'sample-config.yaml' }
